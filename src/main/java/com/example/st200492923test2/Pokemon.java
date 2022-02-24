@@ -109,7 +109,13 @@ public class Pokemon {
     }
 
     public void setPokemonNumber(int pokemonNumber) {
-        this.pokemonNumber = pokemonNumber;
+        if(pokemonNumber >=1 && pokemonNumber <= 999) {
+            this.pokemonNumber = pokemonNumber;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Invalid Pokemon Number");
+        }
     }
 
 
