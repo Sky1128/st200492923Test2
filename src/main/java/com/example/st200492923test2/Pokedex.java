@@ -7,6 +7,7 @@ public class Pokedex {
     private String ownersName;
     private ArrayList<Pokemon> pokemonList = new ArrayList<Pokemon>();
 
+
     public Pokedex(String ownersName) {
         ownersName.trim();
         if (ownersName.length() >= 3) {
@@ -16,9 +17,11 @@ public class Pokedex {
         }
     }
 
+
     public String getOwnersName() {
         return ownersName;
     }
+
 
     public void setOwnersName(String ownersName) {
 
@@ -30,13 +33,11 @@ public class Pokedex {
         }
     }
 
-    public ArrayList<Pokemon> getPokemonList() {
-        return pokemonList;
+
+    public void addPokemon(Pokemon pokemonObject) {
+        pokemonList.add(pokemonObject);
     }
 
-    public void setPokemonList(ArrayList<Pokemon> pokemonList) {
-        this.pokemonList = pokemonList;
-    }
 
 
     }
