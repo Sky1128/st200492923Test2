@@ -66,8 +66,13 @@ public class Pokemon {
     }
 
     public void setHp(int hp) {
-        if(hp >= 0 && hp <+80 )
-        this.hp = hp;
+        if(hp >= 0 && hp <+80 ) {
+            this.hp = hp;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Invalid Hit Points Value");
+        }
     }
 
     public int getAttack() {
@@ -75,8 +80,15 @@ public class Pokemon {
     }
 
     public void setAttack(int attack) {
-        this.attack = attack;
+        if(attack >= 30 && attack <= 90) {
+            this.attack = attack;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Invalid attack Value");
+        }
     }
+
 
     public int getDefense() {
         return defense;
