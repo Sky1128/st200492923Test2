@@ -118,6 +118,25 @@ public class Pokemon {
         }
     }
 
+    public String toString()
+    {
+        String pokemonData;
+        if(pokemonNumber >= 1 && pokemonNumber <= 9)
+        {
+            pokemonData = "00" + Integer.toString(pokemonNumber) + "-" +name;
+        }
+        else if(pokemonNumber >=10 && pokemonNumber <= 99)
+        {
+            pokemonData = "0" + Integer.toString(pokemonNumber) + "-" +name;
+        }
+        else
+        {
+            pokemonData = Integer.toString(pokemonNumber) + "-" +name;
+        }
+
+        return pokemonData;
+    }
+
 
 
 
