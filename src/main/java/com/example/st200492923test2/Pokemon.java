@@ -95,7 +95,13 @@ public class Pokemon {
     }
 
     public void setDefense(int defense) {
-        this.defense = defense;
+        if(defense >= 30  && defense <= 83) {
+            this.defense = defense;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Invalid Defense Value");
+        }
     }
 
     public int getPokemonNumber() {
