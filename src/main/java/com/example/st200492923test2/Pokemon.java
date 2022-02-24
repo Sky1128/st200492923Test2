@@ -1,5 +1,7 @@
 package com.example.st200492923test2;
 
+import java.util.ArrayList;
+
 public class Pokemon {
 
     //Variable declaration
@@ -43,7 +45,20 @@ public class Pokemon {
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+        gender = gender.trim();
+        ArrayList<String> genderList = new ArrayList<String>();
+        genderList.add("male");
+        genderList.add("female");
+        genderList.add("both");
+        genderList.add("unknown");
+
+        if(genderList.contains(gender)) {
+            this.gender = gender;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Please Enter valid Gender Type");
+        }
     }
 
     public int getHp() {
