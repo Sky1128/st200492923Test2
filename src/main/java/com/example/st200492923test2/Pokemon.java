@@ -4,6 +4,7 @@ public class Pokemon {
 
     //Variable declaration
 
+    private String name;
     private String gender;
     private int hp;
     private int attack;
@@ -20,14 +21,21 @@ public class Pokemon {
         this.pokemonNumber = pokemonNumber;
     }
 
-    private String name;
+
 
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        name = name.trim();
+        if(name.length() >= 4) {
+            this.name = name;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Enter Valid Pokemon Name");
+        }
     }
 
     public String getGender() {
