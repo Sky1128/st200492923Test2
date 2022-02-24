@@ -38,6 +38,13 @@ public class Pokedex {
         pokemonList.add(pokemonObject);
     }
 
+    public int getNumberOfPokemons() {
+        int numberOfPokemons;
+        numberOfPokemons = pokemonList.size();
+        return numberOfPokemons;
+    }
+
+
 
 
     }
