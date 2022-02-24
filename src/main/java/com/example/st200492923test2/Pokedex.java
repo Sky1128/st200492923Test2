@@ -1,6 +1,7 @@
 package com.example.st200492923test2;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pokedex {
 
@@ -42,6 +43,19 @@ public class Pokedex {
         int numberOfPokemons;
         numberOfPokemons = pokemonList.size();
         return numberOfPokemons;
+    }
+
+    public ArrayList<Pokemon> getPokemonByGender(String gender)
+    {
+        ArrayList<Pokemon> byGender = new ArrayList<Pokemon>();
+        for(int i = 0; i < pokemonList.size(); i++)
+        {
+            if(pokemonList.get(i).getGender() == gender)
+            {
+                byGender.add(pokemonList.get(i));
+            }
+        }
+        return byGender;
     }
 
 
