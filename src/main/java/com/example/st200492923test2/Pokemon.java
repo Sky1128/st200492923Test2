@@ -66,7 +66,7 @@ public class Pokemon {
     }
 
     public void setHp(int hp) {
-        if(hp >= 0 && hp <+80 ) {
+        if(hp >= 0 && hp <=80 ) {
             this.hp = hp;
         }
         else
@@ -94,6 +94,7 @@ public class Pokemon {
         return defense;
     }
 
+
     public void setDefense(int defense) {
         if(defense >= 30  && defense <= 83) {
             this.defense = defense;
@@ -104,9 +105,11 @@ public class Pokemon {
         }
     }
 
+
     public int getPokemonNumber() {
         return pokemonNumber;
     }
+
 
     public void setPokemonNumber(int pokemonNumber) {
         if(pokemonNumber >=1 && pokemonNumber <= 999) {
@@ -117,6 +120,7 @@ public class Pokemon {
             throw new IllegalArgumentException("Invalid Pokemon Number");
         }
     }
+
 
     public String toString()
     {
