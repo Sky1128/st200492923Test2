@@ -66,6 +66,7 @@ public class Pokemon {
     }
 
     public void setHp(int hp) {
+        if(hp >= 0 && hp <+80 )
         this.hp = hp;
     }
 
