@@ -7,10 +7,10 @@ public class Pokedex {
     private String ownersName;
     private ArrayList<Pokemon> pokemonList = new ArrayList<Pokemon>();
 
-    public Pokedex(String name) {
-        name.trim();
-        if (name.length() >= 3) {
-            this.ownersName = name;
+    public Pokedex(String ownersName) {
+        ownersName.trim();
+        if (ownersName.length() >= 3) {
+            this.ownersName = ownersName;
         } else {
             throw new IllegalArgumentException("Please enter a valid user name");
         }
@@ -21,7 +21,13 @@ public class Pokedex {
     }
 
     public void setOwnersName(String ownersName) {
-        this.ownersName = ownersName;
+
+        ownersName.trim();
+        if (ownersName.length() >= 3) {
+            this.ownersName = ownersName;
+        } else {
+            throw new IllegalArgumentException("Please enter a valid user name");
+        }
     }
 
     public ArrayList<Pokemon> getPokemonList() {
