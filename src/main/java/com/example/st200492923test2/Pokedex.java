@@ -58,7 +58,18 @@ public class Pokedex {
         return byGender;
     }
 
-
+    public ArrayList<Pokemon> getPokemonWithAttackValue(int attack)
+    {
+        ArrayList<Pokemon> byAttackValue = new ArrayList<Pokemon>();
+        for(int i = 0; i < pokemonList.size(); i++)
+        {
+            if(pokemonList.get(i).getAttack() >= attack)
+            {
+                byAttackValue.add(pokemonList.get(i));
+            }
+        }
+        return byAttackValue;
+    }
 
 
     }
